@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-app-autosync
+  labels:
+    app: demo-app-autosync
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: demo-app-autosync
+      labels:
+        app: demo-app-autosync
+    spec:
+      containers:
+        - name: demo-app-autosync
+          image: crccheck/hello-world
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: VERSION
+              value: "0.0.3"
+          ports:
+            - containerPort: 8000
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: demo-app-autosync

@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-api
+spec:
+  replicas: 2
+  revisionHistoryLimit: 6
+  selector:
+    matchLabels:
+      app: test-api
+  template:
+    metadata:
+      labels:
+        app: test-api
+    spec:
+      containers:
+        - image: docker.io/andriicodefresh/argo:v30
+          name: test-api
+          ports:
+            - containerPort: 1700
+        - image: nginx:stable
+          name: test-nginx
+          ports:
+            - containerPort: 1701
