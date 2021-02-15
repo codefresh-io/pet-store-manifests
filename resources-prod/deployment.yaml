@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pet-store
+spec:
+  replicas: 1
+  revisionHistoryLimit: 6
+  selector:
+    matchLabels:
+      app: pet-store
+  template:
+    metadata:
+      labels:
+        app: pet-store
+    spec:
+      containers:
+        - image: docker.io/pashacodefresh/pet-store:ddab3634911b0dfe1fc9beaf6fdcad5b51fecdb9
+          name: pet-store
+          ports:
+            - containerPort: 3001
