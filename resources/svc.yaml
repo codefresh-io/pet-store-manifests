@@ -4,7 +4,7 @@ metadata:
   name: pet-store
 spec:
   ports:
-    - port: 1005
-      targetPort: 1005
+    - port: 3001
+      targetPort: 3001
   selector:
     app: pet-store
