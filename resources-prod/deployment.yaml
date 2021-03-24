@@ -14,7 +14,7 @@ spec:
         app: pet-store
     spec:
       containers:
-        - image: docker.io/pashacodefresh/pet-store:15550d78c14d9d06c22aa74997d270a76f111c14
+        - image: docker.io/pashacodefresh/pet-store:9a40ebafa28c71433e3e52a1206ee08c3c143bc5
           name: pet-store
           ports:
             - containerPort: 3001
