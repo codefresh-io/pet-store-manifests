@@ -14,7 +14,7 @@ spec:
         app: pet-store
     spec:
       containers:
-        - image: nginx:1.18
+        - image: nginx:1.17
           name: pet-store
           ports:
             - containerPort: 3001
