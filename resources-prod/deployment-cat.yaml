@@ -14,7 +14,7 @@ spec:
         app: cat-store
     spec:
       containers:
-        - image: docker.io/pashacodefresh/pet-store:b9832aca87d611948ddb5348be40458da85f103a
+        - image: ocker.io/nginx:1.21
           name: cat-store
           ports:
             - containerPort: 3001
