@@ -14,7 +14,7 @@ spec:
         app: cat-store
     spec:
       containers:
-        - image: docker.io/library/nginx:1.21
+        - image: docker.io/library/nginx:1.18
           name: cat-store
           ports:
             - containerPort: 3001
