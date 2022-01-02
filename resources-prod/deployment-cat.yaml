@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: cat-store
+  labels:
+     app: 'pet-store'
 spec:
   replicas: 1
   revisionHistoryLimit: 6
