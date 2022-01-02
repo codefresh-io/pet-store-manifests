@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: cat-store
   labels:
-     app: 'pet-store'
+     app: 'cat-store'
 spec:
   replicas: 1
   revisionHistoryLimit: 6
