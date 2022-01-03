@@ -16,7 +16,7 @@ spec:
         app: pet-store
     spec:
       containers:
-        - image: docker.io/library/nginx:1.13
+        - image: docker.io/library/nginx:1.12
           name: pet-store
           ports:
             - containerPort: 3001
