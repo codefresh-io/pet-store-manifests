@@ -6,7 +6,7 @@ metadata:
      app: 'pet-store'
 spec:
   replicas: 1
-  revisionHistoryLimit: 6
+  revisionHistoryLimit: 5
   selector:
     matchLabels:
       app: pet-store
